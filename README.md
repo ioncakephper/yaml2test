@@ -64,6 +64,3 @@ let items = yamljs.load('app-tests.yaml');
 let code = createSuite(items);
 console.log(code);
 ```
-
-
-
