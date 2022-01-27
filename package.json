@@ -1,6 +1,6 @@
 {
   "name": "yaml2test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create tests from YAML notation",
   "main": "index.js",
   "scripts": {
