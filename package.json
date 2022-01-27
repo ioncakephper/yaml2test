@@ -11,6 +11,14 @@
     "url": "git+https://github.com/ioncakephper/yaml2test.git"
   },
   "author": "Ion Gireada",
+  "keywords": [
+    "generate",
+    "test",
+    "tests",
+    "jest",
+    "yaml",
+    "cli"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ioncakephper/yaml2test/issues"
