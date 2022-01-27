@@ -14,6 +14,22 @@ npm i -g yaml2test
 
 ## Usage
 
+Create `app-tests.yaml` as follows:
+
+```yaml
+- my application:
+  - can:
+    - create files and folders
+    - read data from .csv files
+  - should:
+    - work as cli
+    - work as an importable package
+ - tests for my application:
+  - should be:
+    - easy to read
+    - error free
+```
+
 ### CLI
 
 Get help:
@@ -29,4 +45,25 @@ yaml2jest app-tests
 ```
 
 > use `app-tests.yaml` file as source and generate `app-tests.test.js` file, which is a `jest` compatible test file.
+
+Specify an output file (path and name of test file to generate)
+
+```bash
+yaml2jest app-tests -o my-app
+```
+
+> use `app-tests.yaml` file as source and generate the output file `my-app.app.test.js`
+
+### Code
+
+```js
+const {createSuite} = 'yaml2test`;
+const yamljs = require('yamljs');
+
+let items = yamljs.load('app-tests.yaml');
+let code = createSuite(items);
+console.log(code);
+```
+
+
 
