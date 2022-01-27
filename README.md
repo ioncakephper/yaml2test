@@ -38,7 +38,21 @@ Get help:
 yaml2jest -h
 ```
 
-Example 1: Create test file from `.yaml` file:
+```
+v1.0.2
+
+C:\Users\ion.gireada\Documents\VSCode Development Projects\yaml2test>node bin/yaml2jest.js -h                
+Usage: yaml2jest [options] <yamlfile>
+
+Create tests from YAML notation
+
+Options:
+  -V, --version            output the version number
+  -o, --output <testfile>  fullpath to test file to create (default: <yamlfile-basename>.test.js)
+  -h, --help               display help for command
+```
+
+**Example 1**: Create test file from `.yaml` file:
 
 ```bash
 yaml2jest app-tests
@@ -46,7 +60,7 @@ yaml2jest app-tests
 
 > use `app-tests.yaml` file as source and generate `app-tests.test.js` file, which is a `jest` compatible test file.
 
-Generated `app-tests.test.js`:
+Generated `app-tests.test.js` will look as follows:
 
 ```js
 describe("my application", () => {
@@ -67,7 +81,7 @@ describe("tests for my application", () => {
 });
 ```
 
-Example 2: Specify an output file (path and name of test file to generate)
+**Example 2**: Specify an output file (path and name of test file to generate)
 
 ```bash
 yaml2jest app-tests -o my-app
@@ -76,6 +90,8 @@ yaml2jest app-tests -o my-app
 > use `app-tests.yaml` file as source and generate the output file `my-app.app.test.js`
 
 ### Code
+
+Use the `app-tests.yaml` as described for CLI.
 
 ```js
 const {createSuite} = 'yaml2test`;
