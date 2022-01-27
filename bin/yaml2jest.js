@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program         = require('commander')
 const fileEasy        = require('file-easy')
 const path            = require('path')
@@ -13,7 +15,6 @@ program
 program
     .arguments('<yamlfile>')
     .option('-o, --output <testfile>', 'fullpath to test file to create (default: <yamlfile-basename>.test.js)')
-    .option('-v, --verbose', 'log progress messages')
     .action((yamlfile, options) => {
         yamlfile = fileEasy.setDefaultExtension(yamlfile, '.yaml')     
         testfile = getTestfileName(yamlfile, options);
