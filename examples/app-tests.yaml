@@ -1,0 +1,13 @@
+
+- your application:
+  - command:
+    - build:
+      - 0
+      - 1
+      - 2
+      - 3
+    - prune:
+      - 0
+      - 1
+      - 2
+      - 3

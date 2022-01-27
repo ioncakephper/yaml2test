@@ -1,0 +1,30 @@
+{
+  "name": "yaml2test",
+  "version": "1.0.0",
+  "description": "Create tests from YAML notation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioncakephper/yaml2test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioncakephper/yaml2test/issues"
+  },
+  "homepage": "https://github.com/ioncakephper/yaml2test#readme",
+  "dependencies": {
+    "beautify": "^0.0.8",
+    "commander": "^8.3.0",
+    "file-easy": "^1.0.3",
+    "hbsr": "^1.0.6",
+    "lodash": "^4.17.21",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
