@@ -38,7 +38,7 @@ Get help:
 yaml2jest -h
 ```
 
-Create test file from `.yaml` file:
+Example 1: Create test file from `.yaml` file:
 
 ```bash
 yaml2jest app-tests
@@ -46,7 +46,28 @@ yaml2jest app-tests
 
 > use `app-tests.yaml` file as source and generate `app-tests.test.js` file, which is a `jest` compatible test file.
 
-Specify an output file (path and name of test file to generate)
+Generated `app-tests.test.js`:
+
+```js
+describe("my application", () => {
+    describe("can", () => {
+        it.todo("create files and folders");
+        it.todo("read data from .csv files");
+    });
+    describe("should", () => {
+        it.todo("work as cli");
+        it.todo("work as an importable package");
+    });
+});
+describe("tests for my application", () => {
+    describe("should be", () => {
+        it.todo("easy to read");
+        it.todo("error free");
+    });
+});
+```
+
+Example 2: Specify an output file (path and name of test file to generate)
 
 ```bash
 yaml2jest app-tests -o my-app
