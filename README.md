@@ -12,3 +12,21 @@ Use `npm` and install with `-g` switch to have the `yaml2jest` CLI.
 npm i -g yaml2test
 ```
 
+## Usage
+
+### CLI
+
+Get help:
+
+```bash
+yaml2jest -h
+```
+
+Create test file from `.yaml` file:
+
+```bash
+yaml2jest app-tests
+```
+
+> use `app-tests.yaml` file as source and generate `app-tests.test.js` file, which is a `jest` compatible test file.
+
