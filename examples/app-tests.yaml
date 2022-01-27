@@ -1,13 +1,12 @@
 
-- your application:
-  - command:
-    - build:
-      - 0
-      - 1
-      - 2
-      - 3
-    - prune:
-      - 0
-      - 1
-      - 2
-      - 3
+- my application:
+  - can:
+    - create files and folders
+    - read data from .csv files
+  - should:
+    - work as cli
+    - work as an importable package
+- tests for my application:
+  - should be:
+    - easy to read
+    - error free

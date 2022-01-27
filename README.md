@@ -24,7 +24,7 @@ Create `app-tests.yaml` as follows:
   - should:
     - work as cli
     - work as an importable package
- - tests for my application:
+- tests for my application:
   - should be:
     - easy to read
     - error free
