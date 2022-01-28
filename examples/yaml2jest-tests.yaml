@@ -1,0 +1,16 @@
+
+- yaml2jest:
+  - command:
+    - build (default command):
+      - when yamlfile is:
+          - specified:
+            - applies .yaml default extension
+            - uses yamlfile basename and path as testfile basename and applies default test file sufix 
+            - and testfile specified:
+              - applies .test.js when testfile has no .test.js
+              - applies .js when testfile ends with .test
+              - uses the testfile filename
+          - unspecified:
+            - sends error message (yamlfile required)
+    - init:
+      - tests needed
