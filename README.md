@@ -38,18 +38,20 @@ Get help:
 yaml2jest -h
 ```
 
-```
-v1.0.2
-
-C:\Users\ion.gireada\Documents\VSCode Development Projects\yaml2test>node bin/yaml2jest.js -h                
-Usage: yaml2jest [options] <yamlfile>
+```txt
+Usage: yaml2jest [options] [command]
 
 Create tests from YAML notation
 
 Options:
-  -V, --version            output the version number
-  -o, --output <testfile>  fullpath to test file to create (default: <yamlfile-basename>.test.js)
-  -h, --help               display help for command
+  -V, --version               output the version number
+  -h, --help                  display help for command
+
+Commands:
+  build [options] <yamlfile>  build tests in a test file (default command)
+  init [configname]           create settings file
+  help [command]              display help for command
+
 ```
 
 **Example 1**: Create test file from `.yaml` file:
