@@ -54,6 +54,23 @@ Commands:
 
 ```
 
+Get help of `build` -- `yaml2jest`'s defauld sub-command:
+
+```bash
+yaml2jest help build
+```
+
+```txt
+Usage: yaml2jest build [options] <yamlfile>
+
+build tests in a test file (default command)
+
+Options:
+  -o, --output <testfile>  fullpath to test file to create (default: <yamlfile-basename>.test.js)
+  -c, --config <filename>  configuration filename (default: "yaml2jest.json")
+  -h, --help               display help for command
+```
+
 **Example 1**: Create test file from `.yaml` file:
 
 ```bash
