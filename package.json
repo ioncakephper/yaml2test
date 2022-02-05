@@ -1,8 +1,11 @@
 {
   "name": "yaml2test",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create tests from YAML notation",
   "main": "index.js",
+  "bin": {
+    "yaml2jest": "bin/yaml2jest.js"
+  },
   "scripts": {
     "test": "jest --verbose"
   },
