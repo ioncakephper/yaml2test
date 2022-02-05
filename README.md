@@ -8,8 +8,8 @@ Create jest-compatible tests from YAML notation.
 
 Use `npm` and install with `-g` switch to have the `yaml2jest` CLI.
 
-```bash
-npm i -g yaml2test
+```shell-session
+$ npm i -g yaml2test
 ```
 
 ## Usage
@@ -34,8 +34,8 @@ Create `app-tests.yaml` as follows:
 
 Get help:
 
-```bash
-yaml2jest -h
+```shell-session
+$ yaml2jest -h
 ```
 
 ```txt
@@ -56,8 +56,8 @@ Commands:
 
 Get help of `build` -- `yaml2jest`'s defauld sub-command:
 
-```bash
-yaml2jest help build
+```shell-session
+$ yaml2jest help build
 ```
 
 ```txt
@@ -73,8 +73,8 @@ Options:
 
 **Example 1**: Create test file from `.yaml` file:
 
-```bash
-yaml2jest app-tests
+```shell-session
+$ yaml2jest app-tests
 ```
 
 > use `app-tests.yaml` file as source and generate `app-tests.test.js` file, which is a `jest` compatible test file.
@@ -102,8 +102,8 @@ describe("tests for my application", () => {
 
 **Example 2**: Specify an output file (path and name of test file to generate)
 
-```bash
-yaml2jest app-tests -o my-app
+```shell-session
+$ yaml2jest app-tests -o my-app
 ```
 
 > use `app-tests.yaml` file as source and generate the output file `my-app.app.test.js`
