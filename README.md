@@ -4,6 +4,21 @@ Create jest-compatible tests from YAML notation.
 
 [![DeepScan grade](https://deepscan.io/api/teams/15501/projects/20018/branches/531871/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=15501&pid=20018&bid=531871)
 
+## Synopsis
+
+```shell-session
+$ yaml2jest -h
+$ yaml2jest help
+
+$ yaml2jest -V
+$ yaml2jest [build] <basename>[.yaml]
+$ yaml2jest [build] <basename>[.yaml] -o <testbasename>[.test[s]][.[jt]s]
+$ yaml2jest [build] <basename>[.yaml] -c <configbasename>[.json]
+$ yaml2jest [build] <basename>[.yaml] -o <testbasename>[.test[s]][.[jt]s] -c <configbasename>[.json]
+
+$ yamljest init [<configbasename>[.json]]
+```
+
 ## Install
 
 Use `npm` and install with `-g` switch to have the `yaml2jest` CLI.
@@ -119,4 +134,93 @@ const yamljs = require('yamljs');
 let items = yamljs.load('app-tests.yaml');
 let code = createSuite(items);
 console.log(code);
+```
+
+## YAML file examples
+
+### One of more test cases
+
+```yaml
+- test case 1
+- test case 2
+```
+
+### Suite as array item with test cases
+
+```yaml
+- Suite:
+  - test case 1
+  - test case 2
+```
+
+### Parent suite with as item several child suites (as items)
+
+```yaml
+- Suite:
+  - child suite 1:
+    - test case 1
+    - test case 2
+  - child suite 2:
+    - test case 3
+    - test case 4
+```
+
+### Several parent suites as items with several child suites (as items)
+
+```yaml
+- Parent Suite 1:
+    - child suite 1:
+      - test case 1
+      - test case 2
+    - child suite 2:
+      - test case 3
+      - test case 4
+    
+- Parent Suite 2:
+  - child suite 3:
+    - test case 5
+    - test case 6
+  - child suite 4:
+    - test case 7
+    - test case 8
+```
+
+### Suite object (as object) with test cases
+
+```yaml
+Suite:
+  - test case 1
+  - test case 2
+```
+
+### Parent suite with several child suites (as object)
+
+```yaml
+Suite:
+  child suite 1:
+    - test case 1
+    - test case 2
+  child suite 2:
+    - test case 3
+    - test case 4
+```
+
+### Several parent suites with several child suites (as object)
+
+```yaml
+Parent Suite 1:
+  child suite 1:
+    - test case 1
+    - test case 2
+  child suite 2:
+    - test case 3
+    - test case 4
+    
+Parent Suite 2:
+  child suite 3:
+    - test case 5
+    - test case 6
+  child suite 4:
+    - test case 7
+    - test case 8
 ```
